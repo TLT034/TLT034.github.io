@@ -1,0 +1,57 @@
+
+:root {
+	--color-darkest: #17252A;
+	--color-dark: #2B7A78;
+	--color-main: #3AAFA9;
+	--color-light: #DEF2F1;
+	--color-lightest: #FEFFFF;
+}
+
+
+
+body {
+	font-family: 'Consolas';
+	color: var(--color-darkest);
+	background-color: var(--color-lightest);
+	color: var(--color-darkest);
+}
+
+.me {
+	border-radius: 50%;
+	max-width: 128px;
+	max-height: 128px;
+}
+
+.txt-lrgr {
+	font-size: 4em;
+}
+
+.txt-lrg {
+	font-size: 3em;
+}
+
+.txt-sm {
+	font-size: 0.5em;
+}
+
+.jumbotron {
+	margin: 0px auto;
+	padding: 0px;
+	background-color: var(--color-light);
+}
+
+.name-title {
+	font-family: 'Courier New';
+	font-weight: lighter;
+}
+
+.row-header {
+	background-color: var(--color-light);
+	margin: 0px auto;
+}
+
+.contact-btn {
+	font-size: 32px;
+}
+
+
