@@ -20,8 +20,12 @@
 </head>
 
 <body>
+	<!-- Header -->
 		<div class="container-fluid row-header">
-			<div class="row pb-1 justify-content-between">
+
+			<!-- TODO: fix name div and contact div overlap -->
+			<!-- Browser -->
+			<div class="d-none d-md-inline row p-0 m-0 justify-content-between">
 				<div class="media">
 					<img src="img/me.png" class="me m-2">
 					<div class="media-body align-self-end">
@@ -36,6 +40,12 @@
 						<!-- <i class="far fa-envelope align-self-end"></i> -->
 					</a>
 				</div>
+			</div>
+
+			<!-- Mobile -->
+			<div class="d-md-none d-flex row p-0 m-0 justify-content-center">
+				<img src="img/me.png" class="me m-2 col-12">
+				<h1 class="name-title txt-lrgr mb-0 text-center">Tristan Thomas</h1>
 			</div>
 		</div>
 

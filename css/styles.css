@@ -37,12 +37,6 @@ body {
 	font-size: 1em;
 }
 
-.jumbotron {
-	margin: 0px auto;
-	padding: 0px;
-	background-color: var(--color-light);
-}
-
 .name-title {
 	font-family: 'Courier New';
 	font-weight: lighter;
@@ -60,7 +54,6 @@ body {
 	height: 100%;
 	right: 0;
 	top: 0;
-	display: block;
 	border-radius: 0;
 	color: var(--color-darkest)
 }
