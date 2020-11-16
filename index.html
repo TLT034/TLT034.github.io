@@ -20,45 +20,120 @@
 </head>
 
 <body>
-	<!-- Header -->
-		<div class="container-fluid row-header">
+		<div class="container-xl main-bg">
 
-			<!-- TODO: fix name div and contact div overlap -->
-			<!-- Browser -->
-			<div class="d-none d-md-inline row p-0 m-0 justify-content-between">
-				<div class="media">
-					<img src="img/me.png" class="me m-2">
-					<div class="media-body align-self-end">
-						<h1 class="name-title txt-lrgr mb-0">Tristan Thomas</h1>
+			<!-- Header Browser-->
+			<div class="container-fluid header-br d-none d-lg-block">
+				<!-- TODO: fix name div and contact div overlap -->
+				<div class="row justify-content-between">
+					<div class="media">
+						<img src="img/me.png" class="me m-2">
+						<div class="media-body align-self-center ml-4">
+							<h1 class="txt-lrgr mb-0">Tristan Thomas</h1>
+						</div>
+					</div>
+					<div>
+						<a class="btn txt-md contact-btn d-flex" href="mailto:tristanlt034@aggiemail.usu.edu">
+							<p class="m-2 align-self-center">Contact</p>
+							<i class="far fa-envelope align-self-center"></i>
+						</a>
 					</div>
 				</div>
-				<!-- <div class="pb-0 ">
-				</div> -->
-				<div class="mr-2">
-					<a class="btn txt-md contact-btn d-flex" href="mailto:tristanlt034@aggiemail.usu.edu">
+			</div>
+	
+			<!-- Header Mobile -->
+			<div class="container-fluid header-mb d-lg-none">
+				<div class=" d-flex row p-0 m-0 justify-content-center">
+					<img src="img/me.png" class="me m-2 col-12">
+					<h1 class="txt-lrg p-0 text-center col-12">Tristan Thomas</h1>
+				</div>
+			</div>
+	
+			<!-- Body Browser-->
+			<div class="row cat-sec d-none d-lg-flex">
+				<div id="projects-title-div">
+					<p id="projects-title">Projects</p>
+				</div>
+				<div class="cat-list col">
+					<div class="cat">
+						<p class="cat-text">All</p>
+					</div>
+					<div class="cat my-5">
+						<p class="cat-text">Web Dev &lt;/&gt;</p>
+					</div>
+					<div class="cat my-5">
+						<p class="cat-text">Mobile Dev</p>
+					</div>
+					<div class="cat mt-5">
+						<p class="cat-text">Misc</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Body Mobile -->
+			<div class="cat-sec-mb d-flex d-lg-none">
+				<div class="mb-1">
+					<p id="projects-title-mb">Projects</p>
+				</div>
+				<div class="cat-list-mb">
+					<div class="cat-mb">
+						<p class="cat-text-mb">All</p>
+					</div>
+					<div class="cat-mb my-4">
+						<p class="cat-text-mb">Web Dev &lt;/&gt;</p>
+					</div>
+					<div class="cat-mb my-4">
+						<p class="cat-text-mb">Mobile Dev</p>
+					</div>
+					<div class="cat-mb mt-4">
+						<p class="cat-text-mb">Misc</p>
+					</div>
+				</div>
+				<div class="w-100">
+					<a class="btn txt-md contact-btn-mb d-flex" href="mailto:tristanlt034@aggiemail.usu.edu">
 						<p class="m-2 align-self-center">Contact</p>
-						<!-- <i class="far fa-envelope align-self-end"></i> -->
+						<i class="far fa-envelope align-self-center"></i>
 					</a>
 				</div>
 			</div>
-
-			<!-- Mobile -->
-			<div class="d-md-none d-flex row p-0 m-0 justify-content-center">
-				<img src="img/me.png" class="me m-2 col-12">
-				<h1 class="name-title txt-lrgr mb-0 text-center">Tristan Thomas</h1>
-			</div>
+	
+	
+			<!-- <div class="col-12 col-md-6 col-xl-4 card">
+				<img src="img/fitness-proj1.jpg" class="card-img">
+				<div class="card-img-overlay flex-column justify-content-end">
+						<h2 class="card-title">Fitness App</h2>
+						<div class="description">
+							<p class="card-text mb-1">Mobile fitness app with Google Maps integration, real-time stat tracking, achievements, sharing, and more.</p>
+							<p class="card-text">Click to veiw in Github</p>
+						</div>
+				</div>
+			</div> -->
+	
 		</div>
-
-
-	<div>
-		<!-- <h1>Projects</h1> -->
-	</div>
-
+	
+	
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-    <!-- <script src="js/scripts.js"></script> -->
+	<!-- <script src="js/scripts.js"></script> -->
+	<script>
+		$(document).ready(function(){
+			// let catListPos = $('.cat-list-br').position();
+			// $('#projects-title').css({'right': catListPos.top + 'px'});
+			// $('#projects-title').css({'top': catListPos.left + 'px'});
+
+			let cardWidth = $('.card').width();
+			$('.card').css({'height': cardWidth + 'px'});
+
+			let cardHeight = $('.card').height();
+			$('.card-img').css({'height': cardHeight-5  + 'px'});
+
+			let descHeight = $('.description').height();
+			document.documentElement.style.setProperty('--move-amount', -descHeight + 'px');
+
+        });
+	</script>
 
 </body>
 
