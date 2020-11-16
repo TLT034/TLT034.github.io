@@ -123,6 +123,13 @@
 			// $('#projects-title').css({'right': catListPos.top + 'px'});
 			// $('#projects-title').css({'top': catListPos.left + 'px'});
 
+			$('.contact-btn-mb').on('touchstart touchend', function(e) {
+        		$(this).toggleClass('touch_effect');
+    		});
+			$('.cat-mb').on('touchstart touchend', function(e) {
+        		$(this).toggleClass('touch_effect');
+    		});
+
 			let cardWidth = $('.card').width();
 			$('.card').css({'height': cardWidth + 'px'});
 

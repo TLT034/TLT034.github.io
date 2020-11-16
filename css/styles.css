@@ -97,7 +97,7 @@ body {
 	justify-content: center;
 	color: var(--color-dark);
 }
-.contact-btn-mb:hover {
+.contact-btn-mb.touch_effect {
 	background-color: var(--color-darkest);
 	color: var(--color-lightest);
 }
@@ -188,13 +188,13 @@ body {
 	font-size: 2em;
 }
 
-.cat:hover {
+.cat:hover, .cat-mb.touch_effect {
 	cursor: pointer;
 	transform: scale(1.4, 1.1);
 	box-shadow: 0 10px 20px rgba(0,0,0,.9), 0 4px 8px rgba(0,0,0,.5);
 }
 
-.cat:hover .cat-text {
+.cat:hover .cat-text, .cat-mb.touch_effect .cat-text-mb {
 	transform: scale(.75, 1);
 	text-align: center;
 }
