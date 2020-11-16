@@ -23,7 +23,7 @@ body {
 }
 
 .txt-lrg {
-	font-size: 3em;
+	font-size: 2.5em;
 }
 
 .txt-md {
@@ -53,14 +53,18 @@ body {
 /* ----------------------- Header ----------------------- */
 .me {
 	border-radius: 50%;
-	max-width: 128px;
-	max-height: 128px;
+	max-width: 175px;
+	max-height: 175px;
+	min-width: 175px;
+	min-height: 175px;
+	padding: 0;
 }
 
 .header-mb {
-	position: relative;
-	margin: 0 auto;
-	background-color: var(--color-light);
+	margin: 0;
+	padding-top: 2%;
+	color: var(--color-lightest);
+	background-color: var(--color-dark);
 }
 
 .header-br {
@@ -81,15 +85,26 @@ body {
 	border-radius: 0;
 	border-top-right-radius: 15px;
 	border-bottom-right-radius: 15px;
-	color: var(--color-lightest)
+	color: var(--color-lightest);
 }
 .contact-btn:hover {
 	background-color: var(--color-darkest);
 	color: var(--color-lightest);
 }
 
+.contact-btn-mb {
+	border-radius: 0;
+	justify-content: center;
+	color: var(--color-dark);
+}
+.contact-btn-mb:hover {
+	background-color: var(--color-darkest);
+	color: var(--color-lightest);
+}
+
+
 /* ----------------------- Body ----------------------- */
-.cat-sec-br {
+.cat-sec {
 	padding: 0;
 	margin: 20% 0 5% 0;
 	width: 100%;
@@ -97,7 +112,15 @@ body {
 	float: right;
 }
 
-#project-title-div {
+.cat-sec-mb {
+	flex-direction: column;
+	align-items: center;
+	padding: 0;
+	margin: 8% 0 5% 0;
+	width: 100%;
+}
+
+#projects-title-div {
 	display: flex;
 	width: 30%;
 	align-self: center;
@@ -114,13 +137,27 @@ body {
 	color: var(--color-dark);
 }
 
-.cat-list-br {
+#projects-title-mb {
+	margin: 0;
+	font-size: 3em;
+	font-weight: bold;
+	color: var(--color-dark);
+}
+
+.cat-list {
 	overflow: hidden;
 	/* margin: 0 0 0 30%; */
 	/* width: 70%; */
 	padding: 5% 15%;
 	border-top-left-radius: 15px;
 	border-bottom-left-radius: 15px;
+	background-color: var(--color-darkest);
+}
+
+.cat-list-mb {
+	width: 100%;
+	height: 100%;
+	padding: 8% 5%;
 	background-color: var(--color-darkest);
 }
 
@@ -131,8 +168,10 @@ body {
 	background-color: var(--color-light);
 }
 
-.cat-top {
-	margin-bottom: 10%;
+.cat-mb {
+	padding: 2% 0;
+	border-radius: 5px;
+	background-color: var(--color-light);
 }
 
 .cat-text {
@@ -140,18 +179,26 @@ body {
 	text-align: center;
 	font-weight: bold;
 	font-size: 4em;
-	/* opacity: .75; */
+}
+
+.cat-text-mb {
+	margin: 0;
+	text-align: center;
+	font-weight: bold;
+	font-size: 2em;
 }
 
 .cat:hover {
 	cursor: pointer;
 	transform: scale(1.4, 1.1);
+	box-shadow: 0 10px 20px rgba(0,0,0,.9), 0 4px 8px rgba(0,0,0,.5);
 }
 
 .cat:hover .cat-text {
 	transform: scale(.75, 1);
 	text-align: center;
 }
+
 
 /* ----------------------- Cards ----------------------- */
 .card {
