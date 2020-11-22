@@ -53,6 +53,8 @@ body {
 
 
 /* ----------------------- Header ----------------------- */
+
+/* --------- Home Page / All --------- */
 .me {
 	border-radius: 50%;
 	max-width: 150px;
@@ -69,23 +71,32 @@ body {
 	background-color: var(--color-dark);
 }
 
-.header-br {
+.header {
 	width: 90%;
 	margin: 5% 0 0 0;
 	border-top-right-radius: 15px;
 	border-bottom-right-radius: 15px;
 	background-color: var(--color-dark);
-	color: var(--color-lightest)
+	color: var(--color-lightest);
+}
+.proj-header {
+	width: 70%;
+	margin: 5% 0 0 0;
+	padding: 0;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background-color: var(--color-dark);
+	color: var(--color-lightest);
 }
 
-.contact-btn {
+.header-btn {
 	height: 100%;
 	border-radius: 0;
 	border-top-right-radius: 15px;
 	border-bottom-right-radius: 15px;
 	color: var(--color-lightest);
 }
-.contact-btn:hover {
+.header-btn:hover {
 	background-color: var(--color-darkest);
 	color: var(--color-lightest);
 }
@@ -100,8 +111,23 @@ body {
 	color: var(--color-lightest);
 }
 
+/* ---------- Projects Page ---------- */
+#header-title-div {
+	width: 82%;
+	padding: 3%;
+	text-align: center;
+}
+#header-text {
+	font-size: 3.5em;
+	white-space: nowrap;
+}
 
-/* ----------------------- Body ----------------------- */
+
+
+
+/* ------------------------ Body ------------------------ */
+
+/* --------- Home Page / All --------- */
 .cat-sec {
 	padding: 0;
 	margin: 18vh 0 5vh 0;
@@ -198,12 +224,25 @@ body {
 	text-align: center;
 }
 
+/* ---------- Projects Page ---------- */
+.proj-sec {
+	width: 100%;
+	margin: 8% 0;
+	padding: 3% 3%;
+	justify-content: space-around;
+	background-color: var(--color-darkest);
+}
 
-/* ----------------------- Cards ----------------------- */
+
+
+
+/* ----------------- Project Cards ------------------- */
 .card {
+	margin: 2% 2%;
 	border-radius: 15px;
 	border-width: 2px;
 	border-color: var(--color-light);
+	background-color: var(--color-light);
 	overflow: hidden;
 }
 
@@ -227,7 +266,7 @@ body {
 }
 
 .card-img-overlay .description {
-	background-color: var(--color-darkest);
+	background-color: var(--color-light);
 	position: absolute;
 	width: 100%;
 	height: auto;
@@ -248,7 +287,7 @@ body {
 }
 
 .card-img-overlay .card-text {
-	color: var(--color-lightest);
+	color: var(--color-darkest);
 	position: relative;
 	width: 100%;
 }

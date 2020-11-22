@@ -23,7 +23,7 @@
 	<div class="container-xl main-bg">
 
 		<!-- Header Browser-->
-		<div class="container-fluid header-br d-none d-lg-block">
+		<div class="container-fluid header d-none d-lg-block">
 			<div class="row justify-content-between">
 				<div class="media">
 					<img src="img/me.png" class="me m-2">
@@ -32,7 +32,7 @@
 					</div>
 				</div>
 				<div>
-					<a class="btn txt-md contact-btn d-flex" href="mailto:tristanlt034@aggiemail.usu.edu">
+					<a class="btn txt-md header-btn d-flex" href="mailto:tristanlt034@aggiemail.usu.edu">
 						<p class="m-2 align-self-center">Contact</p>
 						<i class="far fa-envelope align-self-center"></i>
 					</a>
@@ -55,10 +55,10 @@
 			</div>
 			<div class="cat-list col">
 				<div class="cat">
-					<p class="cat-text">All</p>
+					<a><p class="cat-text">All</p></a>
 				</div>
 				<div class="cat">
-					<p class="cat-text">Web Dev &lt;/&gt;</p>
+					<p class="cat-text">Web Dev</p>
 				</div>
 				<div class="cat">
 					<p class="cat-text">Mobile Dev</p>
@@ -79,7 +79,7 @@
 					<p class="cat-text-mb">All</p>
 				</div>
 				<div class="cat-mb my-4">
-					<p class="cat-text-mb">Web Dev &lt;/&gt;</p>
+					<p class="cat-text-mb">Web Dev</p>
 				</div>
 				<div class="cat-mb my-4">
 					<p class="cat-text-mb">Mobile Dev</p>
@@ -115,31 +115,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-	<!-- <script src="js/scripts.js"></script> -->
-	<script>
-		$(document).ready(function(){
-			// let catListPos = $('.cat-list-br').position();
-			// $('#projects-title').css({'right': catListPos.top + 'px'});
-			// $('#projects-title').css({'top': catListPos.left + 'px'});
-
-			$('.contact-btn-mb').on('touchstart touchend', function(e) {
-        		$(this).toggleClass('touch_effect');
-    		});
-			$('.cat-mb').on('touchstart touchend', function(e) {
-        		$(this).toggleClass('touch_effect');
-    		});
-
-			let cardWidth = $('.card').width();
-			$('.card').css({'height': cardWidth + 'px'});
-
-			let cardHeight = $('.card').height();
-			$('.card-img').css({'height': cardHeight-5  + 'px'});
-
-			let descHeight = $('.description').height();
-			document.documentElement.style.setProperty('--move-amount', -descHeight + 'px');
-
-        });
-	</script>
+	<script src="script.js"></script>
 
 </body>
 
