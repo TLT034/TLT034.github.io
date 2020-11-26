@@ -1,20 +1,26 @@
 const PROJECTS = [
 	/* Web Dev */
-
+	{
+		name: "Auction Website",
+		category: "Web Dev",
+		imPath: "img/img-not-available.jpg",
+		description: "Auction website developed for local charity auctions. Front-end: html, css, Bootstrap, JS, Vue, Vuetify. Back-end: Django, python.",
+		link: "https://github.com/TLT034/AuctionWebsite"
+	},
 	/* Mobile Dev */
 	{
 		name: "Fitness App",
 		category: "Mobile Dev",
 		imPath: "img/projects/md-fitness/activity-report1.jpg",
 		description: "Mobile fitness app built with React Native. Features include: Google Maps integration, real-time stat tracking, achievements, sharing, and more.",
-		link: "github.com/TLT034/FitnessApp"
+		link: "https://github.com/TLT034/FitnessApp"
 	},
 	{
 		name: "Movie Database App",
 		category: "Mobile Dev",
 		imPath: "img/projects/md-movie/results-movie.png",
 		description: "Movie database (IMDB like) app built with React Native. Features include: movie/actor search, browse by category, ratings, cast, popularity, movie details, actor details, and more.",
-		link: "github.com/TLT034/MovieDatabase"
+		link: "https://github.com/TLT034/MovieDatabase"
 	},
 	/* Misc */
 	{
@@ -22,28 +28,42 @@ const PROJECTS = [
 		category: "Misc",
 		imPath: "img/projects/gd-galaga/gameplay1.png",
 		description: "Galaga browser game built with html canvas, css, and JavaScript. Classic Galaga game with multiple stages, multiple enemies, highscores, control mapping, sound effects, particle systems, and more.",
-		link: "github.com/TLT034/Galaga"
+		link: "https://github.com/TLT034/Galaga"
 	},
 	{
 		name: "Lunar Lander",
 		category: "Misc",
 		imPath: "img/projects/gd-lunar-lander/gameplay.png",
 		description: "Lunar Lander browser game built with html canvas, css, and JavaScript. Classic Lunar Lander game with two levels, highscores, control mapping, physics, particle systems, and more.",
-		link: "github.com/TLT034/LunarLander"
+		link: "https://github.com/TLT034/LunarLander"
 	},
 	{
 		name: "Battle Worms",
 		category: "Misc",
 		imPath: "img/projects/gd-worm/gameplay.png",
 		description: "Python game using Pygame library. A spin on the classic snake game. Unique features include: 2-player pvp, player biting, player collision (similar to Slither.io game), and more.",
-		link: "github.com/TLT034/BattleWorms"
+		link: "https://github.com/TLT034/BattleWorms"
 	},
 	{
 		name: "Word Predictor",
 		category: "Misc",
 		imPath: "img/projects/misc-predictive-text/predict.png",
-		description: "Simple word prediction command line app built with C++. Utilizes N-ary tree structure for efficent predicting. Can be built on any terminal, compiler, and OS.",
-		link: "github.com/TLT034/WordPredictor"
+		description: "Simple word prediction command line app built with C++. Utilizes N-ary tree structure for efficent predicting. Can be built on any compiler/OS using Cmake (uses google-test and clang-format).",
+		link: "https://github.com/TLT034/WordPrediction"
+	},
+	{
+		name: "Weights",
+		category: "Misc",
+		imPath: "img/cpp-logo.png",
+		description: "C++ library used for weight and weight conversion. Uses template classes, operator overloading, and more. Can be built on any compiler/OS (uses google-test and clang-format).",
+		link: "https://github.com/TLT034/Weights"
+	},
+	{
+		name: "Custom Shared Ptr",
+		category: "Misc",
+		imPath: "img/cpp-logo.png",
+		description: "Custom C++ shared pointer implementation that also allows shared_ptr arrays. Uses five types of constructors, template classes, operator overloading, and more. Can be built on any compiler/OS (uses google-test and clang-format).",
+		link: "https://github.com/TLT034/CustomSharedPtr"
 	},
 ];
 
@@ -95,6 +115,7 @@ $(document).ready(function(){
 		$(this).toggleClass('touch_effect');
 	});
 
+	/* Adds project cards to the page based on which category is selected */
 	let cardIDNum = 0;
 	PROJECTS.forEach(p => {
 		if (p.category == projFilter || projFilter == 'All') {
@@ -121,10 +142,14 @@ $(document).ready(function(){
 	let cardWidth = $('.card').width();
 	$('.card').css({'height': cardWidth + 'px'});
 
-	// need to delay to make sure the project cards are completely loaded so jquery can accuratly get height
+	// need to delay to make sure the project cards are completely loaded
+	// so jquery can accuratly get height and so click methods work correctly
 	setTimeout(function() {
 		for (let i = 1; i <= cardIDNum; i++) {
 			setDescHeight('#projCard-' + i);
+			$('#projCard-' + i).click(function() {
+				window.open(PROJECTS[i-1].link);
+			});
 		}
 	}, 100);
 
