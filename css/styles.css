@@ -62,13 +62,6 @@ body {
 	padding: 0;
 }
 
-.header-mb {
-	margin: 0;
-	padding-top: 2%;
-	color: var(--color-lightest);
-	background-color: var(--color-dark);
-}
-
 .header {
 	width: 90%;
 	margin: 5% 0 0 0;
@@ -77,14 +70,11 @@ body {
 	background-color: var(--color-dark);
 	color: var(--color-lightest);
 }
-.proj-header {
-	width: 70%;
-	margin: 5% 0 0 0;
-	padding: 0;
-	border-top-right-radius: 15px;
-	border-bottom-right-radius: 15px;
-	background-color: var(--color-dark);
+.header-mb {
+	margin: 0;
+	padding-top: 2%;
 	color: var(--color-lightest);
+	background-color: var(--color-dark);
 }
 
 .header-btn {
@@ -102,7 +92,7 @@ body {
 .contact-btn-mb {
 	border-radius: 0;
 	justify-content: center;
-	color: var(--color-dark);
+	color: var(--color-darkest);
 }
 .contact-btn-mb.touch_effect {
 	background-color: var(--color-darkest);
@@ -110,16 +100,37 @@ body {
 }
 
 /* ---------- Projects Page ---------- */
+.proj-header {
+	width: 70%;
+	margin: 5% 0 0 0;
+	padding: 0;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background-color: var(--color-dark);
+	color: var(--color-lightest);
+}
+.proj-header-mb {
+	margin: 0;
+	padding: 0;
+	color: var(--color-lightest);
+}
+
 #header-title-div {
 	width: 82%;
 	padding: 3%;
 	text-align: center;
 }
+#header-title-div-mb {
+	text-align: center;
+}
+
 #header-text {
 	font-size: 3.5em;
 	white-space: nowrap;
 }
-
+#header-text-mb {
+	font-size: 3em;
+}
 
 
 
@@ -210,15 +221,19 @@ body {
 	font-weight: bolder;
 	font-size: 2em;
 }
-/* TODO: fix mobile touch effects */
-/* TODO: Fix scaling pixelation */
-.cat:hover, .cat-mb:hover, .cat-mb.touch_effect {
+
+.cat:hover {
 	cursor: pointer;
 	transform: scale(1.4, 1.1);
 	box-shadow: 0 10px 20px rgba(0,0,0,.9), 0 4px 8px rgba(0,0,0,.5);
 }
 
-.cat:hover .cat-text, .cat-mb:hover .cat-text, .cat-mb.touch_effect .cat-text-mb {
+.cat-mb:hover, .cat-mb.touch_effect {
+	cursor: pointer;
+	background-color: var(--color-main);
+}
+
+.cat:hover .cat-text{
 	transform: scale(.75, 1);
 	text-align: center;
 }
@@ -305,7 +320,6 @@ body {
 .card:hover img {
 	opacity: 25%;
 	transform: scale(1.2);
-	/* filter: blur(1px); */
 }
 
 .card:hover .card-img-overlay .description {

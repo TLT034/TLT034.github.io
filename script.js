@@ -95,12 +95,10 @@ function setDescHeight(cardId) {
 
 $(document).ready(function(){
 
-	// TODO: get mobile category buttons working
-
 	let projFilter = localStorage.getItem('projFilter');
-	$('#header-text').text(projFilter + ' Projects');
+	$('#header-text, #header-text-mb').text(projFilter + ' Projects');
 	
-	$('.cat').click(function () {
+	$('.cat, .cat-mb').click(function () {
 		let filt = $.trim($(this).text());
 		localStorage.setItem('projFilter', filt);
 		window.location.href = "./projects.html";
@@ -146,10 +144,11 @@ $(document).ready(function(){
 	// so jquery can accuratly get height and so click methods work correctly
 	setTimeout(function() {
 		for (let i = 1; i <= cardIDNum; i++) {
-			setDescHeight('#projCard-' + i);
-			$('#projCard-' + i).click(function() {
-				window.open(PROJECTS[i-1].link);
-			});
+			console.log(window.outerWidth)
+				setDescHeight('#projCard-' + i);
+				$('#projCard-' + i).click(function() {
+					window.open(PROJECTS[i-1].link);
+				});
 		}
 	}, 100);
 
