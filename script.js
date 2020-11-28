@@ -3,7 +3,7 @@ const PROJECTS = [
 	{
 		name: "Auction Website",
 		category: "Web Dev",
-		imPath: "img/img-not-available.jpg",
+		imPath: "img/projects/wd-auction/admin.png",
 		description: "Auction website developed for local charity auctions. Front-end: html, css, Bootstrap, JS, Vue, Vuetify. Back-end: Django, python.",
 		link: "https://github.com/TLT034/AuctionWebsite"
 	},
