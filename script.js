@@ -115,25 +115,24 @@ $(document).ready(function(){
 
 	/* Adds project cards to the page based on which category is selected */
 	let cardIDNum = 0;
-	PROJECTS.forEach(p => {
-		if (p.category == projFilter || projFilter == 'All') {
-			cardIDNum++;
-			$('.proj-sec').append(
-				$('<div>', {'id': 'projCard-' + cardIDNum,'class': 'col-12 col-md-5 card'}).append(
-					$('<img>', {'class': 'card-img', 'src': p.imPath})
+	const filteredProjects = PROJECTS.filter( p => p.category === projFilter || projFilter === "All");
+	filteredProjects.forEach(p => {
+		cardIDNum++;
+		$('.proj-sec').append(
+			$('<div>', {'id': 'projCard-' + cardIDNum,'class': 'col-12 col-md-5 card'}).append(
+				$('<img>', {'class': 'card-img', 'src': p.imPath})
+			).append(
+				$('<div>', {'class': 'card-img-overlay flex-column justify-content-end'}).append(
+					$('<h2>', {'class': 'card-title', text: p.name})
 				).append(
-					$('<div>', {'class': 'card-img-overlay flex-column justify-content-end'}).append(
-						$('<h2>', {'class': 'card-title', text: p.name})
+					$('<div>', {'class': 'description'}).append(
+						$('<p>', {'class': 'card-text mb-1', text: p.description})
 					).append(
-						$('<div>', {'class': 'description'}).append(
-							$('<p>', {'class': 'card-text mb-1', text: p.description})
-						).append(
-							$('<p>', {'class': 'card-text', text: 'Click to view in Github'})
-						)
+						$('<p>', {'class': 'card-text', text: 'Click to view in Github'})
 					)
 				)
-			);
-		}
+			)
+		);
 	});
 
 	/* Sizing for project cards */
@@ -147,7 +146,7 @@ $(document).ready(function(){
 			console.log(window.outerWidth)
 				setDescHeight('#projCard-' + i);
 				$('#projCard-' + i).click(function() {
-					window.open(PROJECTS[i-1].link);
+					window.open(filteredProjects[i-1].link);
 				});
 		}
 	}, 100);
